@@ -13,3 +13,59 @@
   margin: 15px;
   text-align: center;
 }
+
+.jumbotron{
+  background-color: transparent !important;
+}
+
+body{
+  background-image: url(src\assets\BackgroundImg\back1.jpg) ;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.botonFlot{
+  z-index: 2;
+  position: fixed;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: 1s;
+  border-color: transparent;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.botonIzquierda{
+  bottom: 40px; left: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: white;
+}
+
+.botonIzquierda:hover{
+  transition: 1s;
+  padding-left: 30px;
+}
+
+.imagRot{
+  transition: 1s;
+}
+
+.imagRot:hover{
+  transform: rotate(90deg);
+  transition: 1s;
+}
+
+.botonDerecha{
+  bottom: 40px; right: 0px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-color: white;
+}
+
+.botonDerecha:hover{
+  transition: 1s;
+  padding-right: 30px;
+}

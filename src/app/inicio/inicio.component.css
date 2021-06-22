@@ -1,0 +1,14 @@
+.titulo{
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  text-rendering: optimizeLegibility;
+  text-transform: capitalize;
+}
+
+.botonVerMas{
+  border-color: transparent !important;
+  box-shadow: none;
+  background-color: transparent !important;
+}

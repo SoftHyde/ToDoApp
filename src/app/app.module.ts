@@ -1,25 +1,23 @@
-import { GestorService } from './services/gestor.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PagadoresComponent } from './pagadores/pagadores.component';
-import { ProductosComponent } from './productos/productos.component';
-import { FormsModule } from '@angular/forms';
+import { InicioComponent } from './inicio/inicio.component';
+import { PizarronComponent } from './pizarron/pizarron.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PagadoresComponent,
-    ProductosComponent
+    InicioComponent,
+    PizarronComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule
   ],
-  providers: [GestorService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
