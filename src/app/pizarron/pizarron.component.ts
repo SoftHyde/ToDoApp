@@ -1,3 +1,4 @@
+import { ListasService } from './../Services/listas.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PizarronComponent implements OnInit {
 
-  constructor() { }
+  constructor(public listaService:ListasService) { }
 
   ngOnInit(): void {
+  }
+
+  obtenerListas(){
+    return this.listaService.obtenerAllListas();
   }
 
 }

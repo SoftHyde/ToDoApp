@@ -1,0 +1,16 @@
+.jumbotron{
+  margin-bottom: 0px;
+  padding-top: 32px;
+  padding-bottom: 0px;
+}
+
+.tag{
+  border-radius: 20px !important;
+  transition: 1s;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.tagSeleccionado{
+  background-color:lightskyblue !important;
+  transition: 1s;
+}

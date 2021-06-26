@@ -1,15 +1,24 @@
 <div>
   <div class="titulo">
     <div class="conteiner">
+      <!-- Fila con el titulo y el boton -->
       <div class="row d-flex align-items-center">
         <div class="col-md-10">
           <h1 class="font-weight-light">Your To-Do List</h1>
         </div>
         <div class="col-md-2 justify-content-center">
           <div class="col-md-5">
-            <button class="botonVerMas"><img src="./assets/buttonIcons/arrow-icon.png" style="height: 100%; width: 100%;"></button>
+            <button #botonTag class="botonVerMas" (click)="cambioTags()" data-toggle="collapse" data-target="#collapseExample" aria-expanded="tagsVisibles" aria-controls="collapseExample"><img src="./assets/buttonIcons/arrow-icon.png" style="height: 5vh"></button>
           </div>
         </div>
+      </div>
+      <!-- Fila con los tags -->
+
+      <div class="collapse" id="collapseExample">
+        <!-- <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div> -->
+        <app-tags></app-tags>
       </div>
     </div>
   </div>

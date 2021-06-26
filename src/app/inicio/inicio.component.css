@@ -11,4 +11,10 @@
   border-color: transparent !important;
   box-shadow: none;
   background-color: transparent !important;
+  transition: 0.75s;
+}
+
+.rotarBoton{
+  transform: rotate(180deg);
+  transition: 0.75s;
 }

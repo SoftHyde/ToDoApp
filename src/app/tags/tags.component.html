@@ -1,0 +1,8 @@
+<div class="conteiner jumbotron">
+  <div class=" col-md-12 d-flex flex-wrap">
+    <div *ngFor="let item of obtenerTags()">
+      <button class="btn btn-primary tag tagSeleccionado" *ngIf="item.seleccionado else bloqueElse" style="margin-right: 10px; margin-bottom: 10px;" (click)="seleccionarTag(item.id)">{{item.nombre}}</button>
+      <ng-template #bloqueElse><button class="btn btn-primary tag" style="margin-right: 10px; margin-bottom: 10px;" (click)="seleccionarTag(item.id)">{{item.nombre}}</button></ng-template>
+    </div>
+  </div>
+</div>
