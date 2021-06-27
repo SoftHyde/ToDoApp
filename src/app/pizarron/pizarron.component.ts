@@ -17,4 +17,8 @@ export class PizarronComponent implements OnInit {
     return this.listaService.obtenerAllListas();
   }
 
+  obtenerTags(listaTag: Array<number>){
+    return this.listaService.obtenerTag(listaTag);
+  }
+
 }

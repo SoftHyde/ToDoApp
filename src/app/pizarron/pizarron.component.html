@@ -1,11 +1,18 @@
-<div class="conteiner jumbotron" style="background-color: white !important;">
+<div class="conteiner jumbotron pizzarra">
   <div class="col-md-12 d-flex flex-wrap">
-    <div *ngFor="let item of obtenerListas()">
-      <div class="card" style="width: 18rem;">
+    <div *ngFor="let lista of obtenerListas()">
+      <div class="card lista" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">{{item.obtenerNombre()}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{{lista.obtenerNombre()}}</h5>
+          <div class="col-md-12 d-flex flex-wrap" style="padding-left: 0px;">
+            <div *ngFor="let tag of obtenerTags(lista.obtenerTags())">
+              <p class="tag">{{tag.nombre}}</p>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div *ngFor="let item of lista.obtenerItems()">
+            <p class="card-text">{{item.obtenerNombre()}}</p>
+          </div>
         </div>
       </div>
     </div>

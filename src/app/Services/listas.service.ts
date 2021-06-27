@@ -1,3 +1,4 @@
+import { item } from './../Model/modelItem';
 import { Injectable } from '@angular/core';
 import { lista } from '../Model/modelList';
 import { tag } from '../Model/modelTag';
@@ -13,6 +14,7 @@ export class ListasService {
   tag3: tag = new tag(2,"cosas de la life");
   lista1: lista = new lista ("cosas de la casa", [0])
   lista2: lista = new lista ("tareas de la facu", [1,2])
+  // Esto despues vuela
 
   vectorListas: Array<lista> = new Array<lista> ()
   vectorTags: Array<tag> = new Array<tag>()
@@ -27,6 +29,7 @@ export class ListasService {
     this.vectorListas.push(this.lista2)
   }
 
+  //Manejo de tags
   nuevoTag(nombre: string): void {
     var cant = this.vectorTags.length;
     var newTag = new tag(cant-1, nombre)
@@ -37,13 +40,13 @@ export class ListasService {
     return this.vectorTags
   }
 
-  // obtenerTag(listaTag: Array<number>): Array<tag>{
-  //   var tagsRetornar: Array<tag> = new Array<tag>()
-  //   listaTag.forEach(value =>{
-  //     tagsRetornar.push(this.vectorTags[value])
-  //   })
-  //   return tagsRetornar
-  // }
+  obtenerTag(listaTag: Array<number>): Array<tag>{
+    var tagsRetornar: Array<tag> = new Array<tag>()
+    listaTag.forEach(value =>{
+      tagsRetornar.push(this.vectorTags[value])
+    })
+    return tagsRetornar
+  }
 
   seleccionarTag(id: number){
     this.vectorTags[id].seleccionado=!this.vectorTags[id].seleccionado
@@ -57,6 +60,7 @@ export class ListasService {
     return contador;
   }
 
+  //Manejo de listas
   filtrarLista(){
     this.vectorListasFiltradas.splice(0,this.vectorListasFiltradas.length)
     var contador=0
@@ -82,6 +86,11 @@ export class ListasService {
   obtenerAllListas(){
     if (this.cantidadTagsSeleccionados()==0)  return this.vectorListas;
     else return this.vectorListasFiltradas
+  }
+
+  //Manejo de items
+  agregarItemLista(item: item, nombreLista: string){
+    this.vectorListas.find(elemLista => elemLista.obtenerNombre()==nombreLista)?.nuevoItem(item);
   }
 
 }

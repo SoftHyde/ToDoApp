@@ -1,0 +1,34 @@
+.lista{
+  border-radius: 20px;
+  border-top-right-radius: 50px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  margin: 10px;
+  transition: 1s;
+}
+
+.lista:hover{
+  transform: scale(1.02);
+  transition: 1s;
+}
+
+.pizzarra{
+  height: 85%;
+  background-color: whitesmoke !important;
+  border-radius: 20px;
+  overflow: scroll;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+
+.tag{
+  border-radius: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 6px;
+  padding-left: 6px;
+  background-color: royalblue;
+  margin-right: 5px;
+  font-style:italic;
+  color: white;
+  font-size: 70%;
+  margin-bottom: 0px !important;
+}
