@@ -1,14 +1,14 @@
 .lista{
   border-radius: 20px;
   border-top-right-radius: 50px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
   margin: 10px;
   transition: 1s;
 }
 
 .lista:hover{
-  transform: scale(1.02);
   transition: 1s;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 }
 
 .pizzarra{

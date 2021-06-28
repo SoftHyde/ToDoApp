@@ -2,8 +2,42 @@
   <router-outlet #outlet="outlet"></router-outlet>
 
   <button type="button" class="botonFlot botonIzquierda"><img class="imagRot" src="./assets/buttonIcons/config-icon.png" style="height: 3vh;"></button>
-
-  <button type="button" class="botonFlot botonDerecha"><img class="imagRot" src="./assets/buttonIcons/plus-icon.png" style="height: 3vh;"></button>
+  <button type="button" class="botonFlot botonDerecha" data-toggle="modal" data-target="#modalNuevaLista"><img class="imagRot" src="./assets/buttonIcons/plus-icon.png" style="height: 3vh;"></button>
 </div>
+
+<!-- Modal Cobrar -->
+<div class="modal fade in" id="modalNuevaLista" tabindex="-1" role="dialog" aria-labelledby="modalNuevaListaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content" style="border-radius: 20px !important;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalNuevaListaLabel">Nueva Lista:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Aca diseño la modal -->
+        <form>
+          <div class="form-group">
+            <p>Nombre de la Lista:</p>
+            <input type="text" #nameListText class="form-control" placeholder="Ingrese el nombre de la lista aquí" (keyup)="cambioNombreLista()">
+            <div class="invalid-feedback">
+              El nombre ya esta ocupado
+            </div>
+
+
+
+          </div>
+        </form>
+        <div class="col-md-12 d-flex justify-content-center">
+          <button class="btn btn-primary" style="border-radius: 20px !important;">Agregar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 
 

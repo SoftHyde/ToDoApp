@@ -36,6 +36,14 @@ export class ListasService {
     this.vectorTags.push(newTag)
   }
 
+  verificarNombreTag(nombre: string):boolean{
+    //Devuelve false si esta ocupado
+    for (let index = 0; index < this.vectorTags.length; index++) {
+      if (this.vectorTags[index].nombre==nombre) return false
+    }
+    return true
+  }
+
   obtenerAllTags(): Array<tag>{
     return this.vectorTags
   }
@@ -73,6 +81,14 @@ export class ListasService {
       if (contador==this.cantidadTagsSeleccionados()) this.vectorListasFiltradas.push(this.vectorListas[j])
       contador=0;
     }
+  }
+
+  verificarNombreLista(nombre: string):boolean{
+    //Devuelve false si esta ocupado
+    for (let index = 0; index < this.vectorListas.length; index++) {
+      if (this.vectorListas[index].obtenerNombre()==nombre) return false
+    }
+    return true
   }
 
   nuevaLista(nombreLista: string, tags: Array<number>): void {
