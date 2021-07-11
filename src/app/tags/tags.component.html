@@ -2,8 +2,8 @@
   <div class="col-md-12 d-flex flex-wrap align-items-center">
     <h5 class="font-weight-light" style="margin-bottom: 0px !important; margin-right: 10px;">Tags: </h5>
     <div *ngFor="let item of obtenerTags()">
-      <button class="btn btn-primary tag tagSeleccionado" *ngIf="item.seleccionado else bloqueElse" style="margin-right: 10px;" (click)="seleccionarTag(item.id)">{{item.nombre}}</button>
-      <ng-template #bloqueElse><button class="btn btn-primary tag" style="margin-right: 10px;" (click)="seleccionarTag(item.id)">{{item.nombre}}</button></ng-template>
+      <button class="btn btn-primary tag tagSeleccionado" *ngIf="item.seleccionado else bloqueElse" (click)="seleccionarTag(item.id)">{{item.nombre}}</button>
+      <ng-template #bloqueElse><button class="btn btn-primary tag" (click)="seleccionarTag(item.id)">{{item.nombre}}</button></ng-template>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { ListasService } from './../Services/listas.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pizarron',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PizarronComponent implements OnInit {
 
-  constructor(public listaService:ListasService) { }
+  constructor(public listaService:ListasService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,11 @@ export class PizarronComponent implements OnInit {
 
   obtenerTags(listaTag: Array<number>){
     return this.listaService.obtenerTag(listaTag);
+  }
+
+  abrirLista(nombreLista: string){
+    let path = "/opened/" + nombreLista
+    this.router.navigate([path])
   }
 
 }

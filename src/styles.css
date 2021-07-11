@@ -25,11 +25,25 @@ body{
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
+.tag{
+  border-radius: 20px !important;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: 1s;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.tagSeleccionado{
+  background-color:lightskyblue !important;
+  transition: 1s;
+}
+
 .botonIzquierda{
   bottom: 40px; left: 0px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   background-color: white;
+  transition: 1s;
 }
 
 .botonIzquierda:hover{
@@ -51,6 +65,7 @@ body{
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   background-color: white;
+  transition: 1s;
 }
 
 .botonDerecha:hover{

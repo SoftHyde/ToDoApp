@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { PizarronComponent } from './pizarron/pizarron.component';
 import { TagsComponent } from './tags/tags.component';
+import { ListaAbiertaComponent } from './lista-abierta/lista-abierta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     PizarronComponent,
-    TagsComponent
+    TagsComponent,
+    ListaAbiertaComponent
   ],
   imports: [
     BrowserModule,

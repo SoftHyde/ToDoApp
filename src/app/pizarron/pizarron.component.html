@@ -1,8 +1,8 @@
 <div class="conteiner jumbotron pizzarra">
   <div class="col-md-12 d-flex flex-wrap">
     <div *ngFor="let lista of obtenerListas()">
-      <div class="card lista" style="width: 18rem;">
-        <div class="card-body">
+      <button class="card lista" style="width: 18rem;" (click)="abrirLista(lista.obtenerNombre())">
+        <div class="col-md-12 card-body">
           <h5 class="card-title">{{lista.obtenerNombre()}}</h5>
           <div class="col-md-12 d-flex flex-wrap" style="padding-left: 0px;">
             <div *ngFor="let tag of obtenerTags(lista.obtenerTags())">
@@ -14,8 +14,10 @@
             <p class="card-text">{{item.obtenerNombre()}}</p>
           </div>
         </div>
-      </div>
+      </button>
     </div>
   </div>
 </div>
 
+<button #btnIzq type="button" class="botonFlot botonIzquierda"><img class="imagRot" src="./assets/buttonIcons/config-icon.png" style="height: 3vh;"></button>
+<button #btnDer type="button" class="botonFlot botonDerecha" data-toggle="modal" data-target="#modalNuevaLista"><img class="imagRot" src="./assets/buttonIcons/plus-icon.png" style="height: 3vh;"></button>
